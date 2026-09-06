@@ -8,12 +8,16 @@ takes a fresh Mac from zero to working in ~5 minutes.
 
 ## What you need to install
 
-You have **two** files:
+Get the project folder (it already contains `install.sh`, the `dist/` binaries, and
+this guide), plus the add-on file:
 
-| File | What it is |
-|------|-----------|
+| What | It is |
+|------|-------|
 | `sms-code-filler-1.1.7-signed.xpi` | The Firefox add-on |
-| `sms-filler-setup.zip` | The macOS native host + reader (the part that reads Messages) |
+| `install.sh` + `dist/` | The macOS native host + reader (compiled, signed binaries) |
+
+> Download/clone it from `github.com/lylehust/sms-code-filler` — no zip needed.
+> (The repo has `install.sh`, `dist/arm64/` + `dist/x86_64/`, the `.xpi`, and this guide.)
 
 ---
 
