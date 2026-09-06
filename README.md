@@ -18,7 +18,8 @@ box — and auto-submits, so you don't have to type or click anything.
 | File | What it is |
 |------|------------|
 | `sms-code-filler-1.1.7-signed.xpi` | The Firefox add-on (signed by Mozilla/AMO, installs without warnings) |
-| `sms-filler-setup.zip` | The macOS host + reader — **self-contained**, **Developer-ID signed + notarized** (no Python/Xcode/CLT needed) |
+| `install.sh` | Installs the native host + reader (run this) |
+| `dist/arm64/`, `dist/x86_64/` | The compiled host + reader + libpython — **self-contained**, **Developer-ID signed + notarized** (no Python/Xcode/CLT needed) |
 | `SETUP.md` | Full step-by-step installation guide |
 
 ## Requirements
@@ -33,7 +34,7 @@ box — and auto-submits, so you don't have to type or click anything.
 See **[SETUP.md](SETUP.md)**. In short:
 
 1. Install the add-on: Firefox → `about:addons` → gear ⚙ → **Install Add-on From File…** → pick the `.xpi`.
-2. Unzip `sms-filler-setup.zip` and run `bash native/install.sh`.
+2. From this folder run `bash install.sh` (it needs `dist/` alongside — already here).
 3. Grant **Full Disk Access** to
    `~/Library/Application Support/SMSFiller/sms_reader`.
 4. On your iPhone: **Settings → Messages → Text Message Forwarding → enable this Mac**.
@@ -46,8 +47,3 @@ See **[SETUP.md](SETUP.md)**. In short:
   the add-on is signed by **Mozilla (AMO)**.
 - **Full Disk Access** is a macOS privacy grant the reader needs to read Messages;
   only enable it if you trust the source.
-
-## Rebuilding / signing (for developers)
-
-- Build self-contained host/reader: `bash native/build_host.sh` (inside the zip)
-- Sign + notarize: `bash notarize.sh`

@@ -44,10 +44,11 @@ they bundle their own Python, and need **no Python, Xcode, or Command Line Tools
 
 ## Step 2 — Install the native host
 
-1. Unzip `sms-filler-setup.zip`.
+1. Unzip (or `git clone`) the project. The folder should contain `install.sh`
+   and a `dist/` folder with the binaries.
 2. Open **Terminal** and run:
    ```bash
-   cd ~/Downloads/sms-filler-setup/native   # or wherever you unzipped it
+   cd ~/Downloads/sms-code-filler   # or wherever the folder is
    bash install.sh
    ```
    This installs the correct binaries for your Mac (Apple Silicon or Intel) into
@@ -113,7 +114,7 @@ If `codes.json` has codes and `reader.log` is clean, you're ready.
 
 | Symptom | Fix |
 |---------|-----|
-| Add-on shows **"Native host unreachable"** | Re-run `bash native/install.sh`; fully quit & reopen Firefox. |
+| Add-on shows **"Native host unreachable"** | Re-run `bash install.sh` (from the folder with `install.sh` + `dist/`); fully quit & reopen Firefox. |
 | Add-on shows **"No SMS codes found"** | The reader is fine; codes just aren't reaching this Mac — recheck Step 4 (SMS forwarding + Messages sign-in). |
 | `reader.log` shows **"authorization denied"** | Full Disk Access not granted/applied to the reader — redo Step 3, then `launchctl kickstart gui/$(id -u)/com.ye.smsfiller.reader`. |
 | **Gatekeeper/“could not verify”** | Shouldn't happen — binaries are Developer-ID signed + notarized. If it still appears, right-click the file → **Open** once. |
