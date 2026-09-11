@@ -17,7 +17,7 @@ box — and auto-submits, so you don't have to type or click anything.
 
 | File | What it is |
 |------|------------|
-| `sms-code-filler-1.1.7-signed.xpi` | The Firefox add-on (signed by Mozilla/AMO, installs without warnings) |
+| `sms-code-filler-1.1.8-signed.xpi` | The Firefox add-on (signed by Mozilla/AMO, installs without warnings) |
 | `install.sh` | Installs the native host + reader (run this) |
 | `dist/arm64/`, `dist/x86_64/` | The compiled host + reader + libpython — **self-contained**, **Developer-ID signed + notarized** (no Python/Xcode/CLT needed) |
 | `SETUP.md` | Full step-by-step installation guide |

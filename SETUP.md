@@ -13,7 +13,7 @@ this guide), plus the add-on file:
 
 | What | It is |
 |------|-------|
-| `sms-code-filler-1.1.7-signed.xpi` | The Firefox add-on |
+| `sms-code-filler-1.1.8-signed.xpi` | The Firefox add-on |
 | `install.sh` + `dist/` | The macOS native host + reader (compiled, signed binaries) |
 
 > Download/clone it from `github.com/lylehust/sms-code-filler` — no zip needed.

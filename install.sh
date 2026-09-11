@@ -92,7 +92,7 @@ else
     echo "ERROR: python3 not found. Install Python 3 (e.g. 'brew install python@3.14')."
     exit 1
   fi
-  PYTHON_REAL="$(python3 -c 'import os,sys;print(os.path.realpath(sys.executable))' 2>/dev/null || echo "${PYTHON_BIN}")"
+  PYTHON_REAL="$("${PYTHON_BIN}" -c 'import os,sys;print(os.path.realpath(sys.executable))' 2>/dev/null || echo "${PYTHON_BIN}")"
   HOST_EXEC="${INSTALL_DIR}/sms_host.py"
   READER_ARGS=("${PYTHON_REAL}" "${INSTALL_DIR}/sms_reader.py")
   FDA_TARGET="${PYTHON_REAL}"
