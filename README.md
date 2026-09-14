@@ -17,7 +17,7 @@ box — and auto-submits, so you don't have to type or click anything.
 
 | File | What it is |
 |------|------------|
-| `sms-code-filler-1.1.8-signed.xpi` | The Firefox add-on (signed by Mozilla/AMO, installs without warnings) |
+| `sms-code-filler-1.1.9-signed.xpi` | The Firefox add-on (signed by Mozilla/AMO, installs without warnings) |
 | `install.sh` | Installs the native host + reader (run this) |
 | `dist/arm64/`, `dist/x86_64/` | The compiled host + reader + libpython — **self-contained**, **Developer-ID signed + notarized** (no Python/Xcode/CLT needed) |
 | `SETUP.md` | Full step-by-step installation guide |
@@ -33,7 +33,9 @@ box — and auto-submits, so you don't have to type or click anything.
 
 See **[SETUP.md](SETUP.md)**. In short:
 
-1. Install the add-on: Firefox → `about:addons` → gear ⚙ → **Install Add-on From File…** → pick the `.xpi`.
+1. Install the add-on — easiest from Mozilla Add-ons:
+   **https://addons.mozilla.org/en-US/firefox/addon/sms-code-filler/**
+   (or, offline: Firefox → `about:addons` → gear ⚙ → **Install Add-on From File…** → pick the `.xpi`).
 2. From this folder run `bash install.sh` (it needs `dist/` alongside — already here).
 3. Grant **Full Disk Access** to
    `~/Library/Application Support/SMSFiller/sms_reader`.

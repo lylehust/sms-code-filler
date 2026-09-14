@@ -13,7 +13,7 @@ this guide), plus the add-on file:
 
 | What | It is |
 |------|-------|
-| `sms-code-filler-1.1.8-signed.xpi` | The Firefox add-on |
+| `sms-code-filler-1.1.9-signed.xpi` | The Firefox add-on |
 | `install.sh` + `dist/` | The macOS native host + reader (compiled, signed binaries) |
 
 > Download/clone it from `github.com/lylehust/sms-code-filler` — no zip needed.
@@ -32,17 +32,24 @@ they bundle their own Python, and need **no Python, Xcode, or Command Line Tools
 
 ---
 
-## Step 1 — Install the Firefox add-on (`.xpi`)
+## Step 1 — Install the Firefox add-on
+
+**Option A — from Mozilla Add-ons (recommended):**
+
+1. In Firefox open **https://addons.mozilla.org/en-US/firefox/addon/sms-code-filler/**
+2. Click **Add to Firefox** → **Add**, then confirm.
+
+**Option B — from the bundled `.xpi` (offline install):**
 
 1. Open Firefox.
 2. Go to **`about:addons`**.
 3. Click the **gear ⚙** (top-right) → **Install Add-on From File…**.
-4. In the picker press **`Cmd+Shift+G`**, paste the path to the `.xpi`, select it, click **Open**.
+4. In the picker press **`Cmd+Shift+G`**, paste the path to
+   `sms-code-filler-1.1.9-signed.xpi`, select it, click **Open**.
 5. Confirm the install → **Add**.
 6. Verify it appears in **Extensions** (and is enabled).
 
-> If you get a dialog saying the add-on isn't verified, use **Install Add-on From File**
-> again and it will install — it's signed by Mozilla (AMO).
+> The `.xpi` is signed by Mozilla (AMO), so both options install the same add-on.
 
 ---
 
